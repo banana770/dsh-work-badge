@@ -1,0 +1,66 @@
+{
+  "name": "dsh-work-badge",
+  "version": "0.1.0",
+  "description": "Tiny click-through badge for DeepSeek Harness (DSH): shows at a glance whether Beijing time is inside the peak work window (Mon-Fri 09:00-12:00 / 14:00-18:00, UTC+8). Bilingual: 工作时间：峰 / 谷, or Work hours: Peak / Off-peak.",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "README.en.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "dsh-client-plugin",
+    "peak-hours",
+    "off-peak",
+    "badge",
+    "overlay",
+    "shell-overlay",
+    "beijing-time",
+    "utc-8"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/banana770/dsh-work-badge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/banana770/dsh-work-badge/issues"
+  },
+  "homepage": "https://github.com/banana770/dsh-work-badge#readme",
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-slots"
+      ],
+      "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  }
+}

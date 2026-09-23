@@ -1,0 +1,14 @@
+# dsh-work-badge — bundle patch layer for the DSH web profile.
+#
+# Mounts one extra loader entry into the profile's bundle roster. This plugin is
+# purely browser-side: its host half (lib/index.js) is an empty no-op whose only
+# job is to keep a live (non-disabled) loader entry around, while the real logic
+# lives in lib/client.js, which dsh-client-modules discovers through the
+# package's "dsh.client" declaration in package.json.
+#
+# Adding the entry here is what makes the client bundle show up in the loader
+# entries scanned by dsh-client-modules — i.e. it is what actually puts the
+# 峰/谷 badge into the shell.overlay slot on boot.
+- insert:
+    - id: work-badge
+      name: 'dsh-work-badge'

@@ -1,0 +1,11 @@
+node_modules/
+*.log
+
+# Local editor / OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local backups of files edited in place
+*.bak
+*.bak-*

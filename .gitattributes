@@ -1,0 +1,7 @@
+# Keep line endings stable: LF in the repository and in the working tree.
+* text=auto eol=lf
+
+# Snapshots and archives are binary.
+*.png binary
+*.jpg binary
+*.zip binary
