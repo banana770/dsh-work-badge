@@ -8,7 +8,7 @@
 
 ## What this plugin does
 
-Once installed, a single small line appears in the **top-left corner of the DSH window, just above the DeepSeek brand**, showing the current period in real time:
+Once installed, a single small line appears in the **top-left corner of the DSH content area, below the Windows menu bar and just above the DeepSeek brand**, showing the current period in real time:
 
 | What you see | Meaning | When it shows (Beijing time, UTC+8) |
 | --- | --- | --- |
@@ -21,7 +21,7 @@ That label is the plugin's entire job. It is deliberately minimal:
 
 - **It only reports state.** It does not change anything in DSH: no input handling, no model settings, no access to conversation content.
 - **It never blocks clicks.** The label lives in a frame-wide floating layer with `pointer-events: none`, so clicking a brand or icon underneath it works exactly as before.
-- **It stays out of the way.** 12 px text on a rounded translucent pill, pinned to the corner, unaffected by sidebar or conversation-list scrolling.
+- **It stays out of the way.** 10 px text on a rounded translucent pill, pinned below the Windows menu bar in the top-left corner, unaffected by sidebar or conversation-list scrolling.
 - **Bilingual.** The UI text follows the browser language by default, and can be pinned to Chinese or English with one constant (see below).
 
 ## How the period is decided
@@ -73,7 +73,7 @@ dsh plugin --profile web add github:banana770/dsh-work-badge
 dsh plugin --profile web add /path/to/dsh-work-badge
 ```
 
-After installing, reload the DSH web UI (restart DSH or refresh the page) and the badge appears in the top-left corner.
+After installing, reload the DSH UI (restart DSH or refresh the page with Ctrl+R) and the badge appears in the top-left corner, below the menu bar.
 
 ### Manual installation
 
@@ -116,7 +116,7 @@ The badge recomputes in exactly three situations: on mount, when the browser tab
 
 ## Compatibility
 
-- Targets the DSH **web** profile (`platform: "web"`); verified running on DSH `0.1.7-alpha.2`.
+- Targets the DSH **web** profile (`platform: "web"`); verified running on DSH desktop `0.4.2` (the label automatically avoids the Windows menu bar).
 - Depends on the DSH `shell.overlay` client slot and on the `react` that DSH itself provides (declared as `peerDependencies: ^18.2.0`, so a second copy is never installed).
 - Zero host-side dependencies: `lib/index.js` is an empty plugin.
 - No build step: `lib/client.js` is the final, directly mountable bundle.

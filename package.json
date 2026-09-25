@@ -1,7 +1,7 @@
 {
   "name": "dsh-work-badge",
-  "version": "0.1.0",
-  "description": "Tiny click-through badge for DeepSeek Harness (DSH): shows at a glance whether Beijing time is inside the peak work window (Mon-Fri 09:00-12:00 / 14:00-18:00, UTC+8). Bilingual: 工作时间：峰 / 谷, or Work hours: Peak / Off-peak.",
+  "version": "0.1.1",
+  "description": "Tiny click-through badge for DeepSeek Harness (DSH): sits below the Windows menu bar in the top-left corner and shows at a glance whether Beijing time is inside the peak work window (Mon-Fri 09:00-12:00 / 14:00-18:00, UTC+8). Bilingual: 工作时间：峰 / 谷, or Work hours: Peak / Off-peak.",
   "type": "module",
   "main": "./lib/index.js",
   "exports": {
